@@ -20,7 +20,7 @@ var o_autoSkipOpts = {
 };
 
 function f_foxbotInit() { // init foxbot, gets called at the very end
-	window.setTimeout(function(){API.sendChat("Operational!");}, 5000);
+	window.setTimeout(function(){API.sendChat(":3");}, 5000);
 	
     b_hasModRights = API.getSelf().moderator;
     
