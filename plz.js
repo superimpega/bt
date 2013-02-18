@@ -40,7 +40,7 @@ function f_foxbotInit() { // init foxbot, gets called at the very end
 
 function join(user)
 {
-    API.sendChat( "@" + user.username + "Joined The Room");
+    API.sendChat( "/me @" + user.username + " Joined The Room");
 	//window.setTimeout(function(){f_rule({from: user.username});}, 1000);
 }
 
