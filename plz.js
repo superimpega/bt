@@ -40,7 +40,7 @@ function f_foxbotInit() { // init foxbot, gets called at the very end
 
 function join(user)
 {
-    API.sendChat( "/me @" + user.username + " Has Come to wish Steven a Happy Birthday!");
+    API.sendChat( " @" + user.username + " Has Come to wish Steven a Happy Birthday!");
 	//window.setTimeout(function(){f_rule({from: user.username});}, 1000);
 }
 
@@ -124,7 +124,11 @@ function f_retry(data) {
 }		
 function f_cookie(data) {
         API.sendChat('@'+data.from+': Have Some Cake!');
-        window.setTimeout(function(){API.sendChat('/me Hands a slice of Birthday Cake to '+data.from);}, 500);
+        window.setTimeout(function(){API.sendChat(' Hands a slice of Birthday Cake to '+data.from);}, 500);
+}		
+function f_drink(data) {
+        API.sendChat('@'+data.from+': Here is your drink!');
+        window.setTimeout(function(){API.sendChat(' Hands a Cup of mysterious liquids to '+data.from);}, 500);
 }
 function f_rape(data) {
         API.sendChat('/me O_O @'+data.from+'!');
@@ -194,6 +198,12 @@ var o_chatcmds = {
             f: f_commands,
             needsPerm: false
         },
+        
+        '/drink': {
+            f: f_drink,
+            needsPerm: false
+        },
+        
         '/skip': {
             f: f_skip,
             needsPerm: true,
