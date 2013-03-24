@@ -7,7 +7,7 @@ var o_settings = {
     autoQueue: true,
     welcomeMsg: true,
     goodbyeMsg: true,
-    rules: 'Who needs Rules?, Drop it!'
+    rules: 'Celebrate Stevens Birthday!'
 };
 var a_jokes = [];
 var o_tmp = {};
@@ -40,7 +40,7 @@ function f_foxbotInit() { // init foxbot, gets called at the very end
 
 function join(user)
 {
-    API.sendChat( "/me @" + user.username + " Joined The Room");
+    API.sendChat( "/me @" + user.username + " Has Come to wish Steven a Happy Birthday!");
 	//window.setTimeout(function(){f_rule({from: user.username});}, 1000);
 }
 
@@ -63,7 +63,7 @@ function f_commands(data) {
 		}
 	}
 	cmds_clean = cmds.slice(0, -2);
-    //API.sendChat('/me Commands currently supported are: /commands, /rules, /cookie, /lock, /unlock, /skip, /retry, /rapes super, /hugs super, brb, /about, /autoskip, /joke, /test, /reload, /dance');
+    //API.sendChat('/me Commands currently supported are: /commands, /rules, /cake, /lock, /unlock, /skip, /retry, /rapes super, /hugs super, brb, /about, /autoskip, /joke, /test, /reload, /dance');
 	API.sendChat('/me Commands currently supported are: '+cmds_clean);
 }
 
@@ -123,8 +123,8 @@ function f_retry(data) {
               });}, 5000);
 }		
 function f_cookie(data) {
-        API.sendChat('@'+data.from+': here you go!');
-        window.setTimeout(function(){API.sendChat('/me tosses a cookie at '+data.from);}, 500);
+        API.sendChat('@'+data.from+': Have Some Cake!');
+        window.setTimeout(function(){API.sendChat('/me Hands a slice of Birthday Cake to '+data.from);}, 500);
 }
 function f_rape(data) {
         API.sendChat('/me O_O @'+data.from+'!');
@@ -214,7 +214,7 @@ var o_chatcmds = {
             needsPerm: true,
             needsLocalPerm: true
         },
-        '/cookie': {
+        '/cake': {
             f: f_cookie,
             needsPerm: false
         },
