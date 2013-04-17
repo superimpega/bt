@@ -7,7 +7,7 @@ var o_settings = {
     autoQueue: true,
     welcomeMsg: true,
     goodbyeMsg: true,
-    rules: 'Celebrate Stevens Birthday!'
+    rules: 'Rules can be found under the info tab!'
 };
 var a_jokes = [];
 var o_tmp = {};
@@ -40,7 +40,7 @@ function f_foxbotInit() { // init foxbot, gets called at the very end
 
 function join(user)
 {
-    API.sendChat( " @" + user.username + " Has Come to wish Steven a Happy Birthday!");
+    API.sendChat( " @" + user.username + " Joined the room!");
 	//window.setTimeout(function(){f_rule({from: user.username});}, 1000);
 }
 
