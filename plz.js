@@ -20,7 +20,7 @@ var o_autoSkipOpts = {
 };
 
 function f_foxbotInit() { // init foxbot, gets called at the very end
-	window.setTimeout(function(){API.sendChat(":3");}, 5000);
+	window.setTimeout(function(){API.sendChat("SuperBot Active [NoGreet Mode]");}, 5000);
 	
     b_hasModRights = API.getSelf().moderator;
     
@@ -40,7 +40,7 @@ function f_foxbotInit() { // init foxbot, gets called at the very end
 
 function join(user)
 {
-    API.sendChat( " @" + user.username + " Joined the room!");
+    API.sendChat();
 	//window.setTimeout(function(){f_rule({from: user.username});}, 1000);
 }
 
@@ -51,7 +51,7 @@ function leave(user)
 	
 function f_curate(data)
 { 
-	API.sendChat("/me " + data.user.username + " Curated this track, Good Job!");
+	API.sendChat();
 }
     
 function f_commands(data) {
