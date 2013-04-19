@@ -129,6 +129,10 @@ function f_cookie(data) {
 function f_drink(data) {
         API.sendChat('@'+data.from+': Here is your drink!');
         window.setTimeout(function(){API.sendChat(' Hands a Cup of mysterious liquids to '+data.from);}, 500);
+}		
+function f_minecraft(data) {
+        API.sendChat('@'+data.from+': Join the tastycat Minecraft server!');
+        window.setTimeout(function(){API.sendChat('/me IP: tastycatmc.co.uk '+data.from);}, 500);
 }
 function f_rape(data) {
         API.sendChat('/me O_O @'+data.from+'!');
@@ -282,6 +286,10 @@ var o_chatcmds = {
         },
         '/dance': {
             f: f_dance,
+            needsPerm: false
+        },
+        '/minecraft': {
+            f: f_minecraft,
             needsPerm: false
         },
         '/set': {
