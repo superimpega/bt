@@ -183,7 +183,7 @@ function f_toggleStrictMode(data) {
 }
   antispam = function(chat) {
     var plugRoomLinkPatt, sender;
-    plugRoomLinkPatt = /(\bhttps?:\/\/(www.)?adf\.ly[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    plugRoomLinkPatt = /(\bhttps?:\/\/(www.)?adf.ly[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
     if (plugRoomLinkPatt.exec(chat.message)) {
       sender = API.getUser(chat.fromID);
       if (!sender.ambassador && !sender.moderator && !sender.owner && !sender.superuser) {
