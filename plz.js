@@ -20,7 +20,7 @@ var o_autoSkipOpts = {
 };
 
 function f_foxbotInit() { // init foxbot, gets called at the very end
-	window.setTimeout(function(){API.sendChat("SuperBot Active [NoGreet Mode]");}, 5000);
+	window.setTimeout(function(){API.sendChat("SuperBot Active");}, 5000);
 	
     b_hasModRights = API.getSelf().moderator;
     
@@ -40,7 +40,7 @@ function f_foxbotInit() { // init foxbot, gets called at the very end
 
 function join(user)
 {
-    API.sendChat();
+    API.sendChat('Welcome to the Daft Punk Pre-Release party @ +data.from+'
 	//window.setTimeout(function(){f_rule({from: user.username});}, 1000);
 }
 
