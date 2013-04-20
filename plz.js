@@ -181,6 +181,21 @@ function f_toggleStrictMode(data) {
 		o_autoSkipOpts.strictMode = false;
 	}
 }
+  antispam = function(chat) {
+    var plugRoomLinkPatt, sender;
+    plugRoomLinkPatt = /(\bhttps?:\/\/(www.)?plug\.dj[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    if (plugRoomLinkPatt.exec(chat.message)) {
+      sender = API.getUser(chat.fromID);
+      if (!sender.ambassador && !sender.moderator && !sender.owner && !sender.superuser) {
+        if (!data.users[chat.fromID]["protected"]) {
+          API.sendChat("Automatically Removed Adfly Link");
+          return API.moderateDeleteChat(chat.chatID);
+        } else {
+          return API.sendChat();
+        }
+      }
+    }
+  };
 
 function f_set(data) {
     var args = f_getArgs(data.message);
