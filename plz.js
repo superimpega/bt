@@ -40,7 +40,7 @@ function f_foxbotInit() { // init foxbot, gets called at the very end
 
 function join(user)
 {
-    API.sendChat('Welcome to the Daft Punk Pre-Release Party @'+data.from+'!');
+    API.sendChat();
 	//window.setTimeout(function(){f_rule({from: user.username});}, 1000);
 }
 
@@ -188,7 +188,7 @@ function f_toggleStrictMode(data) {
       sender = API.getUser(chat.fromID);
       if (!sender.ambassador && !sender.moderator && !sender.owner && !sender.superuser) {
         if (!data.users[chat.fromID]["protected"]) {
-          API.sendChat("Automatically Removed Adfly Link");
+          API.sendChat("[SuperBOT] Automatically Removed Link");
           return API.moderateDeleteChat(chat.chatID);
         } else {
           return API.sendChat();
