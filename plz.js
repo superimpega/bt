@@ -40,7 +40,7 @@ function f_foxbotInit() { // init foxbot, gets called at the very end
 
 function join(user)
 {
-    API.sendChat('Welcome to the Daft Punk Pre-Release party'
+    API.sendChat('Welcome to the Daft Punk Pre-Release Party @'+data.from+'!');
 	//window.setTimeout(function(){f_rule({from: user.username});}, 1000);
 }
 
