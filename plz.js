@@ -123,12 +123,12 @@ function f_retry(data) {
               });}, 5000);
 }		
 function f_cookie(data) {
-        API.sendChat('@'+data.from+': Have Some Cake!');
-        window.setTimeout(function(){API.sendChat(' Hands a slice of Birthday Cake to '+data.from);}, 500);
+        API.sendChat('@'+data.from+': Have A Cookie!');
+        window.setTimeout(function(){API.sendChat(' :cookie: '+data.from);}, 500);
 }		
 function f_drink(data) {
         API.sendChat('@'+data.from+': Here is your drink!');
-        window.setTimeout(function(){API.sendChat(' Hands a Cup of mysterious liquids to '+data.from);}, 500);
+        window.setTimeout(function(){API.sendChat(' :beer: '+data.from);}, 500);
 }		
 function f_minecraft(data) {
         API.sendChat('@'+data.from+': Join the tastycat Minecraft server!');
@@ -411,6 +411,14 @@ function f_djAdvance(obj)
 			}
 		}
 }
+fans = function(chat) {
+    var msg;
+
+    msg = chat.message.toLowerCase();
+    if (msg.indexOf('fan me') !== -1 || msg.indexOf('fan for fan') !== -1 || msg.indexOf('fan pls') !== -1 || msg.indexOf('fan4fan') !== -1 || msg.indexOf('add me to fan') !== -1 || msg.indexOf('autowoot:') !== -1) {
+      return API.moderateDeleteChat(chat.chatID);
+    }
+  };
 
 a_jokes = ["\
 Q. Why did the man put his money in the freezer?\
